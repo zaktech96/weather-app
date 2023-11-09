@@ -38,8 +38,8 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-200 to-blue-400">
-      <div className="bg-white rounded-lg shadow-md p-6 md:p-10 lg:w-1/2 transform transition-transform duration-500 hover:scale-105 bg-gradient-to-r from-blue-500 to-blue-700 text-white">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-200 to-blue-300">
+      <div className="bg-white rounded-lg shadow-md p-6 sm:p-10 lg:p-10 bg-gradient-to-r from-blue-400 to-blue-300-300 text-gray-black">
         {weatherData ? (
           <div>
             <p className="text-sm md:text-base lg:text-lg">
