@@ -39,20 +39,30 @@ function App() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-200 to-blue-400">
-      <div className="bg-white rounded-lg shadow-md p-9 w-1/6 transform transition-transform duration-500 hover:scale-105 bg-gradient-to-r from-gray-50-500 to-gray-600-700 text-black">
+      <div className="bg-white rounded-lg shadow-md p-6 md:p-10 lg:w-1/2 transform transition-transform duration-500 hover:scale-105 bg-gradient-to-r from-blue-500 to-blue-700 text-white">
         {weatherData ? (
           <div>
-            <p>Location: {weatherData.name}</p>
+            <p className="text-sm md:text-base lg:text-lg">
+              Location: {weatherData.name}
+            </p>
             {weatherData.main ? (
               <div>
-                <p>Temperature: {weatherData.main.temp} °C</p>
-                <p>Humidity: {weatherData.main.humidity}%</p>
-                <p>Description: {weatherData.weather[0].description}</p>
+                <p className="text-sm md:text-base lg:text-lg">
+                  Temperature: {weatherData.main.temp} °C
+                </p>
+                <p className="text-sm md:text-base lg:text-lg">
+                  Humidity: {weatherData.main.humidity}%
+                </p>
+                <p className="text-sm md:text-base lg:text-lg">
+                  Description: {weatherData.weather[0].description}
+                </p>
               </div>
             ) : null}
           </div>
         ) : (
-          <p>Loading weather data...</p>
+          <p className="text-sm md:text-base lg:text-lg">
+            Loading weather data...
+          </p>
         )}
       </div>
     </div>
